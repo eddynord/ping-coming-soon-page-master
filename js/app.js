@@ -7,23 +7,28 @@ let success = document.querySelector('.success')
 
 
 form.addEventListener('submit', (e) => {
-    const regEmail = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const regEmail = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
     
-    if(email.value === '' || email.value === null) {
-        error.style.display = 'block'
-        success.style.display = 'none'
+    if(regEmail.value = false) {
+        error.style.display = 'block';
+        success.style.display = 'none';
+        e.preventDefault();
+    } else if(email.value === '' || email.value === null) {
+        error.style.display = 'block';
+        e.preventDefault();
         
-        e.preventDefault()
-    }else if(regEmail.value = false) {
-        error.style.display = 'block'
-        success.style.display = 'none'
-        e.preventDefault()
-    } 
+    }else {
+        success.style.display = 'block';
+        error.style.display = 'none';
+    }
+        
+        
+       
+        
+        
+        
+        
 
     
-    else {
-        success.style.display = 'block';
-        setTimeout(success, 6000);
-    }
         
 })
