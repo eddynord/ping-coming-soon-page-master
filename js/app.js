@@ -7,10 +7,21 @@ let loading = document.querySelector('.loading')
 
 
 form.addEventListener('submit', (e) => {
-    if(email.value === '') {
+    const regEmail = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    
+    if(email.value === '' || email.value === null) {
+        
         error.style.display = 'block'
+        
         e.preventDefault()
-    } else {
+    } if(regEmail.value = false) {
+        
+        // error.style.display = 'block'
+        e.preventDefault()
+
+    } 
+    
+    else {
         document.querySelector('.loader').style.display = 'block';
         setTimeout(loading, 6000);
     }
