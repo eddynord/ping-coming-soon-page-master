@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.wrapper {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    
+}
+
+.header {
+    text-align: center;
+    padding-top: 75px;
+}
+
+.header-desc {
+    padding-top: 40px ;
+    line-height: 50px;
+}
+
+.header-desc h1 {
+    font-weight: 100;
+    color: hsl(0, 0%, 59%);
+}
+.header-desc strong {
+    color: #000000;
+}
+
+.header-desc span {
+    color: #000000;
+    font-size: 15px;
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+}
+
+
+#form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+} 
+
+#email, #submit-btn {
+    width: 375px;
+    height: 45px;
+    border-radius: 24px;
+}
+
+#email {
+    border: thin solid hsl(223, 100%, 88%);
+    
+}
+
+#submit-btn {
+    background-color: hsl(223, 87%, 63%);
+    color: #ffffff;
+    font-size: 15px;
+    border-color: transparent;
+    cursor: pointer;
+}
+
+#submit-btn:hover {
+    transition: 0.5s;
+    transform: scale(1.01);
+    
+}
+
+.error {
+    text-align: center;
+    color: rgb(255, 0, 0);
+    display: none;
+}
+
+.loader {
+    text-align: center;
+    margin-top: -50px;
+    display: none;
+}
+
+input::placeholder {
+   padding-left: 25px;
+   color:hsl(223, 100%, 88%);
+   font-weight: 300;
+   font-size: 15px;
+}
+
+.banner {
+    text-align: center;
+    padding-top: 75px;
+}
+
+.social {
+    padding-top: 125px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 25px;
+}
+
+.footer {
+    padding-top: 30px;
+}
+
+.footer p {
+    font-size: 12px;
+    text-align: center;
+}
+
+
+/* MEDIA QUERY  */
+
+@media (min-width: 1200px) {
+    #form {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+    } 
+
+    #submit-btn {
+        background-color: hsl(223, 87%, 63%);
+        color: #ffffff;
+        font-size: 15px;
+        border-color: transparent;
+        cursor: pointer;
+        width: 150px;
+    }
+
+    
+
+
+
+}
